@@ -14,7 +14,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
+    
     return _MyAppState();
   }
 }
@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
       },
       {
         'questionText': 'Who\'s your favorite instructor?',
-        'answers': ['Max', 'Max', 'Max', 'Max'],
+        'answers': ['Reza', 'Arafat', 'Rahat', 'Erfan'],
       },
     ];
     return MaterialApp(
@@ -50,7 +50,13 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('My First App'),
         ),
-        body: _questionIndex < _questions.length ? Quiz(questions: _questions, answerQuestion: _answerQuestion, questionIndex: _questionIndex, ) : Result(),
+        body: _questionIndex < _questions.length
+            ? Quiz(
+                questions: _questions,
+                answerQuestion: _answerQuestion,
+                questionIndex: _questionIndex,
+              )
+            : Result(),
       ),
     );
   }
